@@ -436,6 +436,9 @@ cat /etc/shells
 
 # 查看当前使用的shell
 echo $SHELL
+
+# 修改使用的shell
+chsh -s /bin/bash
 ```
 
 
