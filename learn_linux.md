@@ -418,7 +418,7 @@ sudo useradd -m -d /home/xxx tester2
 # 创建一个没有家目录且不能登录的用户
 sudo useradd -s /sbin/nologin tester3
 
-# 床架用户时把用户加入不同的用户组
+# 创建用户时把用户加入不同的用户组
 sudo useradd -m -G xxx,sudo tester4
 # 注意各个组名之间用逗号分隔，不能有空格
 
