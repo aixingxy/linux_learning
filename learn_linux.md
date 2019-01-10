@@ -381,10 +381,45 @@ sudo
 | 03 | userdel -r 用户名  | 删除用户  | -r选项会自动删除用户家目录  |
 | 04 | cat /etc/passwd \| grep 用户名  | 确认用户信息  | 创建用户后，用户信息会保存在/etc/passwd文件中 |
 
+```shell
+useradd [option] username
+
+[option]:
+
+-d<登入目录> 指定用户登入时的目录。
+
+-g<群组> 初始群组。
+
+-G<群组> 非初始群组。
+
+-m 自动创建用户的家目录。
+
+-M 不要创建用户的家目录。
+
+-N 不要创建以用户名称为名的群组。
+
+-s 指定用户登入后所使用的shell。
+```
+
 提示：
 + 创建用户时，如果忘记添加-m选项指定新用户的家目录——最简单的方法就是删除用户，重新创建
 + 创建用户时，会默认创建一个和用户名同名的组名
 + 用户信息保存在/etc/passwd文件中
+
+
+### 常见用例
+```shell
+# 创建一个带有家目录并且可以登录bash的用户（常用）
+sudo useradd -m -s /bin/bash tester1
+# 指定创建用户家目录的路径
+sudo useradd -m -d /home/xxx tester2
+# 创建一个没有家目录且不能登录的用户
+sudo useradd -s /sbin/nologin tester3
+# 床架用户时把用户加入不同的用户组
+sudo useradd -m -G xxx,sudo tester4
+# 注意各个组名之间用逗号分隔，不能有空格
+
+```
 
 ## 查看用户信息
 | 序号 | 命令 | 作用|
