@@ -411,10 +411,13 @@ useradd [option] username
 ```shell
 # 创建一个带有家目录并且可以登录bash的用户（常用）
 sudo useradd -m -s /bin/bash tester1
+
 # 指定创建用户家目录的路径
 sudo useradd -m -d /home/xxx tester2
+
 # 创建一个没有家目录且不能登录的用户
 sudo useradd -s /sbin/nologin tester3
+
 # 床架用户时把用户加入不同的用户组
 sudo useradd -m -G xxx,sudo tester4
 # 注意各个组名之间用逗号分隔，不能有空格
