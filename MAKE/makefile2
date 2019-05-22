@@ -1,0 +1,16 @@
+# ObjFiles 定义目标文件
+ObjFiles=main.o add.o sub.o div.o mul.o
+# 目标文件的用法$(Var)
+app:$(ObjFiles)
+	gcc -o app -I ./include main.o add.o sub.o div.o mul.o
+main.o:main.c
+	gcc -c main.c -I ./include
+add.o:add.c
+	gcc -c add.c -I ./include
+sub.o:sub.c
+	gcc -c sub.c -I ./include
+mul.o:mul.c
+	gcc -c mul.c -I ./include
+div.o:div.c
+	gcc -c div.c -I ./include
+	
