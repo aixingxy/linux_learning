@@ -53,6 +53,7 @@ gcc hello.o -o hello
 |-l dir | 指定库名(通常libxxx.so或libxxx.am)，写成-lxxx  |
 |-i   |包含头文件路径(可以绝对路径，可以相对路径)   |
 |-lname | 链接称为libname.a(静态库)或者libname.so(动态库)的库文件。若两个库都存在，则根据编译方式(-static还是-shared)进行链接 |
+|-w|关闭所有警告|
 | -Wall  | 显示更多的警告|
 |-D|指定宏定义|
 |-lstdc++ |编译c++代码 |
