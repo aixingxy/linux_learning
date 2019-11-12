@@ -438,6 +438,11 @@ sudo useradd -s /sbin/nologin tester3
 sudo useradd -m -G xxx,sudo tester4
 # 注意各个组名之间用逗号分隔，不能有空格
 
+# 创建带sudo权限的用户
+sudo useradd -m -s /bin/bash -d /devdata/xiaoyang -G sudo xiaoyang
+# 注意家目录会自动创建，不需要事先创建
+# 删除用户userdel xiaoyang
+
 ```
 
 ## 查看用户信息
